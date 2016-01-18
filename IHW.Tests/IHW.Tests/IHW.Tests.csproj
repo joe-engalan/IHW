@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E03C212-E06A-4E11-A736-8C944877A7C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IHW.Tests</RootNamespace>
+    <AssemblyName>IHW.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="cp ${TargetFile} ${SolutionDir}/../IHW.Unity/Assets/Editor" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\packages\NSubstitute.1.9.2.0\lib\net45\NSubstitute.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Test.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Test.feature.cs">
+      <DependentUpon>Test.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestSteps.cs" />
+    <Compile Include="EngineTest.cs" />
+    <Compile Include="HeadingTest.cs" />
+    <Compile Include="PilotTest.cs" />
+    <Compile Include="..\..\IHW.Unity\Assets\Source\IHW.Core\Engine.cs">
+      <Link>IHW.Core\Engine.cs</Link>
+    </Compile>
+    <Compile Include="..\..\IHW.Unity\Assets\Source\IHW.Core\Heading.cs">
+      <Link>IHW.Core\Heading.cs</Link>
+    </Compile>
+    <Compile Include="..\..\IHW.Unity\Assets\Source\IHW.Core\IEngine.cs">
+      <Link>IHW.Core\IEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\..\IHW.Unity\Assets\Source\IHW.Core\IHeading.cs">
+      <Link>IHW.Core\IHeading.cs</Link>
+    </Compile>
+    <Compile Include="..\..\IHW.Unity\Assets\Source\IHW.Core\INavigator.cs">
+      <Link>IHW.Core\INavigator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\IHW.Unity\Assets\Source\IHW.Core\IPilot.cs">
+      <Link>IHW.Core\IPilot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\IHW.Unity\Assets\Source\IHW.Core\Pilot.cs">
+      <Link>IHW.Core\Pilot.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
