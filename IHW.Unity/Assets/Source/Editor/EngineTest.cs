@@ -17,7 +17,7 @@ namespace IHW {
 		}
 
 		[Test]
-		public void accelerates() {
+		public void shouldApplyPositiveThrustWhenAccelerating() {
 
 			engine.accelerate(1.0f);
 
@@ -25,30 +25,30 @@ namespace IHW {
 		}
 
 		[Test]
-		public void decelerates() {
+		public void shouldApplyNegativeThrushWhenDecelerating() {
 			engine.decelerate(1.0f);
 			Assert.That(engine.thrust, Is.EqualTo(-10.0f));
 		}
 
 		[Test]
-		public void clampsAcceleration() {
+		public void shouldNotExceedMaximumThrustWhenAccelerating() {
 			engine.accelerate(1000.0f);
 			Assert.That(engine.thrust, Is.EqualTo(engine.maxThrust));
 		}
 
 		[Test]
-		public void clampsDecleration() {
+		public void shouldNotExceedMaxNegativeThrustWhenDecelerating() {
 			engine.decelerate(1000.0f);
 			Assert.That(engine.thrust, Is.EqualTo(-engine.maxThrust));
 		}
 
 		[Test]
-		public void initialThrustIsZero() {
+		public void shouldStartWithZeroThrust() {
 			Assert.That (engine.thrust, Is.EqualTo(0.0f));
 		}
 
 		[Test]
-		public void initialThrustIsAddedTo() {
+		public void shouldIncrementInitialThrustWhenAccelerating() {
 			engine.thrust = 50.0f;
 			engine.accelerate(0.5f);
 

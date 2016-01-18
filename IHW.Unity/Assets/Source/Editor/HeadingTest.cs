@@ -15,12 +15,12 @@ namespace IHW {
 		}
 
 		[Test]
-		public void initialHeadingIsIdentity() {
+		public void shouldInitializeHeadingToQuaternionIdentity() {
 			Assert.That(heading.heading, Is.EqualTo(Quaternion.identity));
 		}
 
 		[Test]
-		public void canSetInitialHeading() {
+		public void shouldBeAbleToInitializeHeading() {
 			Quaternion expected = Quaternion.LookRotation(Vector3.up);
 
 			heading.heading = expected;
@@ -29,7 +29,7 @@ namespace IHW {
 		}
 
 		[Test]
-		public void rotatesTo() {
+		public void shouldRotateTowardsTheNewHeading() {
 			Quaternion newHeading = Quaternion.LookRotation(Vector3.down);
 
 			heading.heading = Quaternion.Euler(Vector3.up);

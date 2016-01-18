@@ -25,12 +25,12 @@ namespace IHW {
 		}
 
 		[Test]
-		public void initialVelocityIsZero() {
+		public void shouldInitializeVelocityToZero() {
 			Assert.That (pilot.velocity, Is.EqualTo(Vector3.zero));
 		}
 
 		[Test]
-		public void movesToward() {
+		public void shouldMoveTowardsTargetPosition() {
 			Vector3 targetPosition = new Vector3(50.0f, 50.0f, 100.0f);
 			Quaternion targetHeading = Quaternion.LookRotation(targetPosition - pilot.currentPosition);
 			float dt = 1.0f;
@@ -43,7 +43,7 @@ namespace IHW {
 		}
 
 		[Test]
-		public void movesAwayFrom() {
+		public void shouldMoveAwayFromTargetPosition() {
 			Vector3 targetPosition = new Vector3(50.0f, 50.0f, 100.0f);
 			Quaternion targetHeading = Quaternion.LookRotation(pilot.currentPosition - targetPosition);
 			float dt = 1.0f;
@@ -55,7 +55,7 @@ namespace IHW {
 		}
 
 		[Test]
-		public void increasesVelocityWhenMoving() {
+		public void shouldIncreaseVelocityWhenMovingTowards() {
 			engine.thrust.Returns(1.0f);
 			pilot.heading.heading = Quaternion.LookRotation(Vector3.forward);
 
@@ -65,7 +65,7 @@ namespace IHW {
 		}
 
 		[Test]
-		public void accumulatesVelocityWhenMoving() {
+		public void shouldAccumulateVelocityWhenMovingTowards() {
 			engine.thrust.Returns(1.0f, 2.0f);
 			pilot.heading.heading = Quaternion.LookRotation(Vector3.forward);
 			Vector3 targetPosition = Vector3.forward * 10.0f;
@@ -78,7 +78,7 @@ namespace IHW {
 		}
 
 		[Test]
-		public void updatesPositionWhenMoving() {
+		public void shouldUpdatePositionWhenMovingTowards() {
 			engine.thrust.Returns(1.0f);
 			pilot.heading.heading = Quaternion.LookRotation(Vector3.forward);
 			Vector3 targetPosition = Vector3.forward * 10.0f;
@@ -90,7 +90,7 @@ namespace IHW {
 		}
 
 		[Test]
-		public void clampsToMaxVelocity() {
+		public void shouldNotExceedMaxVelocity() {
 			engine.thrust.Returns(1000.0f);
 			pilot.heading.heading = Quaternion.LookRotation(Vector3.forward);
 			Vector3 targetPosition = Vector3.forward * 10000.0f;
