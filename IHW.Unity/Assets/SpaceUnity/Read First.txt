@@ -1,4 +1,4 @@
-Thank You for purchasing "SPACE for Unity" (Version 1.03)
+Thank You for purchasing "SPACE for Unity" (Version 1.05)
 
 Please refer to the documentation found in SpaceUnity/_Documentation to begin
 creating space scenes.
@@ -11,8 +11,22 @@ QUICKSTART:
 
 
 
-
 *** WHAT'S NEW? ***
+VERSION 1.05
+
+Only Unity 5.x supported.
+
+ FIXES
+
+  * Compiled for Unity 5.x
+
+  * Added pragma "keepalpha" for planet ring shader to allow transparency in Unity 5
+
+  * Removed compiler specific code for Unity version 3.x and 5.x
+
+  * Added interpolation to spaceship rigidbody and changed camera update mode to 
+    LATE_UPDATE for smoother movement
+
 VERSION 1.03
 
  FIXES

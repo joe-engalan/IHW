@@ -2,14 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 3
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Rings-014
   m_Shader: {fileID: 4800000, guid: 015860e2161765e488aee44aeb434497, type: 3}
-  m_ShaderKeywords: []
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -29,8 +31,8 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .738806009, g: .738806009, b: .738806009, a: 1}
+        second: {r: 0.738806, g: 0.738806, b: 0.738806, a: 1}
       data:
         first:
           name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .541176498}
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5411765}

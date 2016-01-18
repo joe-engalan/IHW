@@ -2,14 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 3
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: ShockWave_Simple
   m_Shader: {fileID: 4800000, guid: e364bec85c316420092937bb9d21855e, type: 3}
-  m_ShaderKeywords: []
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -29,7 +31,7 @@ Material:
       data:
         first:
           name: _TintColor
-        second: {r: .708955228, g: .708955228, b: .708955228, a: .917647064}
+        second: {r: 0.7089552, g: 0.7089552, b: 0.7089552, a: 0.91764706}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

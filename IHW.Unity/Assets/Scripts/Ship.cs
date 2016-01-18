@@ -2,6 +2,7 @@
 using System.Collections;
 using IHW;
 
+[RequireComponent(typeof(IHW_Spaceship))]
 public class Ship : MonoBehaviour {
 
 	public Pilot pilot;
@@ -10,6 +11,10 @@ public class Ship : MonoBehaviour {
 	public float maxThrust = 100.0f;
 	public float maxVelocity = 10.0f;
 	public float turnRate = 180.0f;
+
+	IHW_Spaceship ship;
+
+	public bool canFire { get; set; }
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +25,8 @@ public class Ship : MonoBehaviour {
 		pilot.heading = new Heading();
 		pilot.heading.turnRate = turnRate;
 		pilot.maxVelocity = maxVelocity;
+
+		ship = GetComponent<IHW_Spaceship> ();
 	}
 	
 	// Update is called once per frame
@@ -30,6 +37,10 @@ public class Ship : MonoBehaviour {
 			transform.rotation = pilot.heading.heading;
 			transform.position = pilot.currentPosition;
 		}
-	
+
+		ship.thrustersEnabled = pilot.engine.thrust > 0.0f;
+		ship.firingEnabled = canFire;
+
 	}
+
 }

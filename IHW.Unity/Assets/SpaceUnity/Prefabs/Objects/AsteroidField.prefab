@@ -57,9 +57,8 @@ MonoBehaviour:
   range: 20000
   maxAsteroids: 1000
   respawnDestroyedAsteroids: 1
-  respawnIfOutOfRange: 1
-  distanceSpawn: .949999988
-  minAsteroidScale: .0531914905
+  distanceSpawn: 0.95
+  minAsteroidScale: 0.05319149
   maxAsteroidScale: 1
   scaleMultiplier: 1000
   isRigidbody: 0
@@ -72,12 +71,12 @@ MonoBehaviour:
   mass: 10
   minAsteroidAngularVelocity: 0
   maxAsteroidAngularVelocity: 1
-  angularVelocityMultiplier: .100000001
+  angularVelocityMultiplier: 0.1
   minAsteroidVelocity: 0
   maxAsteroidVelocity: 1
   velocityMultiplier: 1
   fadeAsteroids: 1
-  distanceFade: .949999988
+  distanceFade: 0.95
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -89,4 +88,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

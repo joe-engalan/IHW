@@ -2,14 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 3
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: GlowPlane
   m_Shader: {fileID: 4800000, guid: bbf40922523a2483584b1c4e6b1132ea, type: 3}
-  m_ShaderKeywords: []
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -33,7 +35,7 @@ Material:
       data:
         first:
           name: _TintColor
-        second: {r: .124685958, g: .115920529, b: .0126712881, a: .381850719}
+        second: {r: 0.12468596, g: 0.11592053, b: 0.012671288, a: 0.38185072}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

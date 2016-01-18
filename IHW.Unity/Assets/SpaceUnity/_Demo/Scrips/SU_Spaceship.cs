@@ -44,10 +44,6 @@ public class SU_Spaceship : MonoBehaviour {
 	public Transform laserShotPrefab;
 	// Laser shot sound effect
 	public AudioClip soundEffectFire;
-
-	public bool forceThrusters = true;
-	public float cooldown = 0.2f;
-	public float currentCooldown = 0.2f;
 	
 	// Private variables
 	private Rigidbody _cacheRigidbody;
@@ -62,7 +58,7 @@ public class SU_Spaceship : MonoBehaviour {
 		}
 		
 		// Cache reference to rigidbody to improve performance
-		_cacheRigidbody = rigidbody;
+		_cacheRigidbody = GetComponent<Rigidbody>();
 		if (_cacheRigidbody == null) {
 			Debug.LogError("Spaceship has no rigidbody - the thruster scripts will fail. Add rigidbody component to the spaceship.");
 		}
@@ -82,17 +78,7 @@ public class SU_Spaceship : MonoBehaviour {
 			}
 		}
 		
-		if(forceThrusters) {
-			foreach (SU_Thruster _thruster in thrusters) {
-				_thruster.StartThruster();
-			}
-			
-		}
-//		if (Input.GetButtonDown("Fire2")) {
-		if(currentCooldown > 0)
-			currentCooldown -= Time.deltaTime;
-
-		if (currentCooldown <= 0 && Random.value < 0.2f) {
+		if (Input.GetButtonDown("Fire2")) {
 			// Itereate through each weapon mount point Vector3 in array
 			foreach (Vector3 _wmp in weaponMountPoints) {
 				// Calculate where the position is in world space for the mount point
@@ -105,7 +91,7 @@ public class SU_Spaceship : MonoBehaviour {
 			}
 			// Play sound effect when firing
 			if (soundEffectFire != null) {
-				audio.PlayOneShot(soundEffectFire);
+				GetComponent<AudioSource>().PlayOneShot(soundEffectFire);
 			}
 		}		
 	}

@@ -2,14 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 3
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Planet-Alien-AshyGreen
   m_Shader: {fileID: 4800000, guid: 90b25fb9592ba1a40850d923b70be624, type: 3}
-  m_ShaderKeywords: []
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -44,16 +46,16 @@ Material:
     m_Floats:
       data:
         first:
-          name: _InvFade
-        second: 1
-      data:
-        first:
           name: _LightScale
         second: 1.63
       data:
         first:
           name: _AtmosFalloff
-        second: 4.76999998
+        second: 4.77
+      data:
+        first:
+          name: _InvFade
+        second: 1
     m_Colors:
       data:
         first:
@@ -61,13 +63,13 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
           name: _AtmosNear
-        second: {r: .272335857, g: .513985991, b: .330043286, a: 1}
+        second: {r: 0.27233586, g: 0.513986, b: 0.3300433, a: 1}
       data:
         first:
           name: _AtmosFar
-        second: {r: .0738179907, g: .430069923, b: .174844697, a: 1}
+        second: {r: 0.07381799, g: 0.43006992, b: 0.1748447, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}

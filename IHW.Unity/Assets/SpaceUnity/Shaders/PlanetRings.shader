@@ -10,7 +10,7 @@ SubShader {
 	LOD 200
 	Blend SrcAlpha OneMinusSrcAlpha
 	CGPROGRAM
-	#pragma surface surf Lambert addshadow
+	#pragma surface surf Lambert addshadow keepalpha
 	
 	sampler2D _MainTex;
 	fixed4 _Color;
