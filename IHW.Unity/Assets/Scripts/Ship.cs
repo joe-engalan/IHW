@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using IHW;
+using IHW.Core;
 
 [RequireComponent(typeof(IHW_Spaceship))]
 public class Ship : MonoBehaviour {

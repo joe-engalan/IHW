@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using NUnit.Framework;
 
-namespace IHW {
+namespace IHW.Core {
 
 	[TestFixture]
 	internal class HeadingTest {

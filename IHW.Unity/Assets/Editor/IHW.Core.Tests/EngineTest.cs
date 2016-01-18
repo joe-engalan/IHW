@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using UnityEngine;
 
-namespace IHW {
+namespace IHW.Core {
 
 	[TestFixture]
 	[Category("Core Tests")]

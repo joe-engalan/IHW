@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-namespace IHW {
+﻿namespace IHW.Core {
 
 	public interface IEngine  {
 

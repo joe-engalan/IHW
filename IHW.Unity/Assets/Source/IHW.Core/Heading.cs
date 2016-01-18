@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace IHW {
+namespace IHW.Core {
 
 	public class Heading : IHeading {
 

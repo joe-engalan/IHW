@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using NSubstitute;
 
-namespace IHW {
+namespace IHW.Core {
 
 	[TestFixture]
 	internal class PilotTest {
